@@ -1,0 +1,17 @@
+[package]
+name = "obiba-integration-tests"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dev-dependencies]
+near-workspaces = { version = "=0.23.0", default-features = false, features = ["install"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+anyhow = "1"
+serde_json = "1"
+sha2 = "0.10"
+ed25519-dalek = "2"
+bs58 = "0.5"
+base64 = "0.22"
+obiba-common = { workspace = true }
+near-sdk = { workspace = true, features = ["unit-testing"] }

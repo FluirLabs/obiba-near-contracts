@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["common", "obiba-account", "obiba-pay", "mock-ft", "tests"]
+
+[workspace.dependencies]
+near-sdk = { version = "=5.29.1", default-features = false }
+near-contract-standards = "=5.29.1"
+obiba-common = { path = "common" }
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
